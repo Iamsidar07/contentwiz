@@ -123,7 +123,7 @@ const WriteContent = () => {
                             })
                         }
                     </div>
-                    <input type="submit" value={`${loading ? "Creating content..." : "Create content"}`} className=' text bg-white border-none rounded-lg text-center cursor-pointer px-12 text-black py-6 font-bold  md:max-w-md md:ml-auto ' />
+                    <input type="submit" value={`${loading ? "Creating content..." : "Create content"}`} className=' text bg-white border-none rounded-lg text-center cursor-pointer px-12 text-black py-3 font-bold  md:max-w-md md:ml-auto ' />
                 </div>
             </form>
 
