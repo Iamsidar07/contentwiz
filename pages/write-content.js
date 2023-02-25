@@ -99,7 +99,7 @@ const WriteContent = () => {
                     <input
                         type="number"
                         name='wordLimit'
-                        onChange={(e) => setWordLimit(parseInt(e.target.value))}
+                        onChange={(e) => setWordLimit(e.target.value)}
                         value={wordLimit}
                         placeholder="word limit"
                         className="text-base leading-6 text-gray-200 px-4 py-6  rounded-lg outline-none  "
