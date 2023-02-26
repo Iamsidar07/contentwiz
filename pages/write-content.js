@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
 import { AiFillCheckCircle } from 'react-icons/ai';
-import Button from '../components/Button';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
 import 'react-toastify/dist/ReactToastify.css';
@@ -22,16 +21,13 @@ const plateforms = [
     },
 ]
 
-
-const BASE_URL = "https://aicodebuddy.vercel.app"
-
 const WriteContent = () => {
     const [platform, setPlatform] = useState("Twitter");
     const [topic, setTopic] = useState("");
-    const [wordLimit, setWordLimit] = useState(700);
+    const [wordLimit, setWordLimit] = useState();
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
-    console.log(result)
+
     async function onSubmit(event) {
         event.preventDefault();
         if (loading) {
@@ -84,7 +80,7 @@ const WriteContent = () => {
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
 
-            <h1 className='text-center text-3xl md:text-5xl my-[15%] md:mt-10 md:mb-0 max-w-3xl '>&quot;Unleash your writing potential with <span className='text-blue-600'>AI..&quot;</span></h1>
+            <h1 className='text-center text-3xl md:text-6xl my-[15%] md:mt-10 md:mb-0 max-w-4xl font-serif font-bold '>&quot;Unleash your writing potential with <span className='text-blue-600'>AI..&quot;</span></h1>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5  max-w-5xl ">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-3 pt-10'>
@@ -94,7 +90,7 @@ const WriteContent = () => {
                         onChange={(e) => setTopic(e.target.value)}
                         value={topic}
                         placeholder="write your topic."
-                        className="text-base leading-6 text-gray-200 px-4 py-6 md:flex-1 rounded-lg outline-none  "
+                        className="text-base leading-6 text-gray-500 bg-white px-4 py-6 md:flex-1 rounded-lg outline-none  "
                     />
                     <input
                         type="number"
@@ -102,7 +98,7 @@ const WriteContent = () => {
                         onChange={(e) => setWordLimit(e.target.value)}
                         value={wordLimit}
                         placeholder="word limit"
-                        className="text-base leading-6 text-gray-200 px-4 py-6  rounded-lg outline-none  "
+                        className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none  "
                     />
                 </div>
                 <div className='flex flex-col md:flex-row md:items-center space-y-10 md:space-y-0 md:justify-between'>
@@ -110,7 +106,7 @@ const WriteContent = () => {
                         {
                             plateforms.map(({ name, image }, i) => {
 
-                                return <div onClick={() => setPlatform(name)} className='p-3 bg-gray-900 rounded-3xl cursor-pointer group space-y-3 flex flex-col items-center justify-center w-32 h-32' key={i}>
+                                return <div onClick={() => setPlatform(name)} className={`p-3 bg-white rounded-3xl cursor-pointer group space-y-3 flex flex-col items-center justify-center h-32 ${platform === name ? "w-36 h-36 shadow" : "w-32"}`} key={i}>
                                     <Image src={image} alt={"Twitter"} width={90} height={90} className="group-hover:scale-110 transition-transform duration-200 ease-in" />
                                     <p>{
                                         platform === name
@@ -123,7 +119,7 @@ const WriteContent = () => {
                             })
                         }
                     </div>
-                    <input type="submit" value={`${loading ? "Creating content..." : "Create content"}`} className=' text bg-white border-none rounded-lg text-center cursor-pointer px-12 text-black py-3 font-bold  md:max-w-md md:ml-auto ' />
+                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className=' text bg-[#100025] border-none rounded-lg text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto ' />
                 </div>
             </form>
 
