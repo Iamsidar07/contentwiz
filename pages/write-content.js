@@ -80,7 +80,7 @@ const WriteContent = () => {
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
 
-            <h1 className='text-center text-3xl md:text-6xl my-[15%] md:mt-10 md:mb-0 max-w-4xl font-serif font-bold '>&quot;Unleash your writing potential with <span className='text-blue-600'>AI..&quot;</span></h1>
+            <h1 className='text-center text-3xl md:text-6xl my-[15%] md:mt-10 md:mb-0 max-w-4xl  font-bold '>&quot;Unleash your writing potential with <span className='text-blue-600'>AI..&quot;</span></h1>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5  max-w-5xl ">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-3 pt-10'>
