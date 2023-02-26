@@ -10,7 +10,7 @@ export default function Home() {
       <main className=" py-4 ">
         <section className='flex flex-col  items-center justify-around max-w-4xl mx-auto leading-3  space-y-5 h-[90vh]'>
           <div className='space-y-2'>
-            <h1 className='text-center text-3xl md:text-6xl font-serif font-bold'>Transforming the way you create <span className='text-blue-600'>content</span></h1>
+            <h1 className='text-center text-3xl md:text-6xl  font-bold'>Transforming the way you create <span className='text-blue-600'>content</span></h1>
             <p className='text-center max-w-2xl mx-auto leading-7'>Innovative <span className='underline'>AI-powered</span> platform that makes writing easy. From blog posts to product descriptions, transform your writing with our cutting-edge technology.</p>
           </div>
           <div className=' text-center'>
