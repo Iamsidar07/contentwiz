@@ -24,7 +24,7 @@ const plateforms = [
 const WriteContent = () => {
     const [platform, setPlatform] = useState("Twitter");
     const [topic, setTopic] = useState("");
-    const [wordLimit, setWordLimit] = useState(700);
+    const [wordLimit, setWordLimit] = useState("700");
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
 
