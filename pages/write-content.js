@@ -53,7 +53,7 @@ const WriteContent = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "dark",
+                    theme: "light",
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
@@ -69,7 +69,7 @@ const WriteContent = () => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "dark",
+                theme: "light",
             });
             console.error(error);
             alert(error.message);
