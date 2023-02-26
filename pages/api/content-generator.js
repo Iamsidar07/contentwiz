@@ -52,7 +52,7 @@ export default async function (req, res) {
 
 function generatePrompt(platform,topic,wordLimit) {
     
-    return `Write  a ${topic} for ${platform} post under ${wordLimit} words. Please write this in a structured and polite way.`;
+    return `Create content on the topic ${topic} to upload on the  ${platform} platform  under ${wordLimit} words. Please write this in a structured and polite way.`;
 }
 
 //topic->job description for SDE🙍🏿‍♂️ role
