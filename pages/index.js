@@ -2,12 +2,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import HomeFeature from '../components/HomeFeature';
-
+import Fade from 'react-reveal/Fade';
 
 export default function Home() {
   return (
     <div >
       <main className=" py-4 ">
+        <Fade bottom>
         <section className='flex flex-col  items-center justify-around max-w-4xl mx-auto leading-3  space-y-5 h-[90vh]'>
           <div className='space-y-2'>
             <h1 className='text-center text-3xl md:text-6xl  font-bold'>Transforming the way you create <span className='text-blue-600'>content</span></h1>
@@ -22,6 +23,7 @@ export default function Home() {
             <small className='underline'>No sign in required</small>
           </div>
         </section>
+        </Fade>
         <HomeFeature title={"Create content for YouTube"} image={"/blog.svg"} alt="content for youtube" desc={"Take your YouTube channel to the next level with our AI-powered content generator. Effortlessly create engaging and high-quality  content that your audience will love."} />
 
         <HomeFeature title={"Create content for Twitter"} image={"/growth-analysis.gif"} alt="content for twitter" desc={"Make a statement on Twitter with our AI-generated content. Create attention-grabbing tweets effortlessly, and stand out in the crowded social media landscape."} changeSequence={true} />
