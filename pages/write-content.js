@@ -40,7 +40,7 @@ const WriteContent = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ platform, topic, wordLimit }),
+                body: JSON.parse({ platform, topic, wordLimit }),
             });
 
             const data = await response.json();
