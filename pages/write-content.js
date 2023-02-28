@@ -57,6 +57,7 @@ const WriteContent = () => {
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
+            console.log(data)
             setResult(data.result);
 
         } catch (error) {
@@ -77,6 +78,7 @@ const WriteContent = () => {
             setLoading(false);
         }
     }
+    console.log(JSON.stringify({ platform, topic, wordLimit }))
  
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
