@@ -16,7 +16,7 @@ export default async function (req, res) {
     }
 
     const {platform,topic,wordLimit} = req.body || '';
-    console.log({platform,topic,wordLimit})
+    console.log(JSON.stringify(req.body))
     if (platform.trim().length === 0 || topic.trim().length === 0) {
         res.status(400).json({
             error: {
