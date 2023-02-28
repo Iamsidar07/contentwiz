@@ -40,7 +40,7 @@ const WriteContent = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.parse({ platform, topic, wordLimit }),
+                body: JSON.stringify({ platform, topic, wordLimit }),
             });
 
             const data = await response.json();
@@ -77,6 +77,7 @@ const WriteContent = () => {
             setLoading(false);
         }
     }
+ 
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
 
