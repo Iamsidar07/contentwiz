@@ -79,7 +79,7 @@ const WriteContent = () => {
         }
     }
     console.log(JSON.stringify({ platform, topic, wordLimit }))
- 
+    console.log({result})
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
 
@@ -129,12 +129,12 @@ const WriteContent = () => {
             {
                 loading && <Loading />
             }
-            {
+            {/* {
                 result && <div className='px-2 my-6'>
                     <p className='leading-5  my-2'>Note: <span className='underline'>Do not worry about formating it will be automatically formated when you paste it into your workspace</span></p>
                     <Result result={result} />
                 </div>
-            }
+            } */}
             <ToastContainer />
         </section>
     )
