@@ -42,7 +42,7 @@ const WriteContent = () => {
                 },
                 body: JSON.stringify({ platform,topic,wordLimit }),
             });
-
+            console.log(response)
             const data = await response.json();
             if (response.status !== 200) {
                 toast.error('Oops! something went wrong', {
