@@ -9,15 +9,15 @@ import 'react-toastify/dist/ReactToastify.css';
 const plateforms = [
     {
         name: "Twitter",
-        image: "/twitter.png",
+        image: "/twitter-min.png",
     },
     {
         name: "Youtube",
-        image: "/youtube-logo.png",
+        image: "/youtube-logo-min.png",
     },
     {
         name: "Linkedin",
-        image: "/linkedin.png",
+        image: "/linkedin-min.png",
     },
 ]
 

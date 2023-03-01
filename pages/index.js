@@ -26,9 +26,9 @@ export default function Home() {
         </Fade>
         <HomeFeature title={"Create content for YouTube"} image={"/blog.svg"} alt="content for youtube" desc={"Take your YouTube channel to the next level with our AI-powered content generator. Effortlessly create engaging and high-quality  content that your audience will love."} />
 
-        <HomeFeature title={"Create content for Twitter"} image={"/growth-analysis.gif"} alt="content for twitter" desc={"Make a statement on Twitter with our AI-generated content. Create attention-grabbing tweets effortlessly, and stand out in the crowded social media landscape."} changeSequence={true} />
+        <HomeFeature title={"Create content for Twitter"} image={"/growth-analysis-min.gif"} alt="content for twitter" desc={"Make a statement on Twitter with our AI-generated content. Create attention-grabbing tweets effortlessly, and stand out in the crowded social media landscape."} changeSequence={true} />
 
-        <HomeFeature title={"Create content for LinkedIn"} image={"/content-moderation.gif"} alt="content for LinkedIn" desc={"Build your professional brand with our AI-powered content generator for LinkedIn. Create engaging posts that showcase your expertise and help you connect with your network."} />
+        <HomeFeature title={"Create content for LinkedIn"} image={"/content-moderation-min.gif"} alt="content for LinkedIn" desc={"Build your professional brand with our AI-powered content generator for LinkedIn. Create engaging posts that showcase your expertise and help you connect with your network."} />
         <ToastContainer />
         <section className={`flex items-center justify-center py-4 md:px-[2%] h-48 bg-[#f6f5fa]`}>
           <h2 className='text-5xl md:text-6xl font-bold text-center md:text-left'>Always <span className='text-blue-500'>free!</span> </h2>
