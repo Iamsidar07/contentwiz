@@ -15,8 +15,11 @@ export default async function (req, res) {
         return;
     }
 
-    const {platform,topic,wordLimit} = req.body || '';
-    console.log(JSON.stringify(req.body))
+
+    let platform=req.body.platform;
+    let topic=req.body.topic;
+    let wordLimit=req.body.wordLimit;
+    
     if (platform.trim().length === 0 || topic.trim().length === 0) {
         res.status(400).json({
             error: {
@@ -25,12 +28,13 @@ export default async function (req, res) {
         });
         return;
     }
+    
 
     try {
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: generatePrompt(platform,topic,wordLimit),
-            temperature: 0.9,
+            temperature: 0.8,
             max_tokens: 2000,
         });
         res.status(200).json({ result: completion.data.choices[0].text });
