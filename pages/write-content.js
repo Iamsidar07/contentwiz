@@ -40,7 +40,11 @@ const WriteContent = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ platform,topic,wordLimit }),
+                body: JSON.stringify({
+                    "platform":platform,
+                    "topic":topic,
+                    "wordLimit":wordLimit,
+                 }),
             });
             
             const data = await response.json();
@@ -135,7 +139,7 @@ const WriteContent = () => {
                     <Result result={result} />
                 </div>
             }
-            <ToastContainer />
+    
         </section>
     )
 }
