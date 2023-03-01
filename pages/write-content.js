@@ -57,7 +57,7 @@ const WriteContent = () => {
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
-            console.log(data)
+            console.log({data})
             setResult(data.result);
 
         } catch (error) {
