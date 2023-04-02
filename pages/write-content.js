@@ -123,7 +123,7 @@ const WriteContent = () => {
                 loading && <Loading />
             }
             {
-                result && <div className='px-2 mt-12'>
+                result && <div className='mt-12'>
                     <Result result={result} />
                 </div>
             }
