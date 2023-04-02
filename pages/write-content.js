@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
-import { toast, ToastContainer } from 'react-toastify';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
-import 'react-toastify/dist/ReactToastify.css';
 
 const plateforms = [
     {
@@ -50,33 +48,13 @@ const WriteContent = () => {
             const data = await response.json();
 
             if (response.status !== 200) {
-                toast.error('Oops! something went wrong', {
-                    position: "bottom-center",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+                alert('Oops! something went wrong')
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
             
             setResult(data.result);
 
         } catch (error) {
-            // Consider implementing your own error handling logic here
-            toast.error(error, {
-                position: "bottom-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
             console.error(error);
             alert(error.message);
         } finally {
@@ -87,26 +65,32 @@ const WriteContent = () => {
     return (
         <section className='flex flex-col  items-center  max-w-7xl mx-auto '>
 
-            <h1 className='text-center text-3xl md:text-6xl my-[15%] md:mt-10 md:mb-0 max-w-4xl  font-bold '>&quot;Unleash your writing potential with <span className='text-blue-600'>AI..&quot;</span></h1>
-            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5  max-w-5xl ">
+            <h1 className='text-center text-[70px] my-[15%] md:mt-10 md:mb-0 max-w-5xl  font-["Product Sans Bold"] font-bold text-transparent bg-clip-text bg-gradient-to-br from-black to-blue-600'>&quot;Unleash your writing potential with <span className='text-blue-600'>Artificial Intelligence</span>&quot;</h1>
+            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-3 pt-10'>
-                    <input
-                        type="text"
-                        name='topic'
-                        onChange={(e) => setTopic(e.target.value)}
-                        value={topic}
-                        placeholder="write your topic."
-                        className="text-base leading-6 text-gray-500 bg-white px-4 py-6 md:flex-1 rounded-lg outline-none  "
-                    />
-                    <input
-                        type="number"
-                        name='wordLimit'
-                        onChange={(e) => setWordLimit(e.target.value)}
-                        value={wordLimit}
-                        placeholder="word limit"
-                        className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none  "
-                    />
+                    <div className='w-full'>
+                        <p className='font-bold my-2 text-left'>Describe topic for the content:</p>
+                        <input
+                            type="text"
+                            name='topic'
+                            onChange={(e) => setTopic(e.target.value)}
+                            value={topic}
+                            placeholder="write your topic."
+                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6 md:flex-1 rounded-lg outline-none w-full"
+                        />
+                    </div>
+                    <div>
+                        <p className='font-bold my-2 text-left'>Word limit:</p>
+                        <input
+                            type="number"
+                            name='wordLimit'
+                            onChange={(e) => setWordLimit(e.target.value)}
+                            value={wordLimit}
+                            placeholder="word limit"
+                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none  "
+                        />
+                    </div>
                 </div>
                 <div className='flex flex-col md:flex-row md:items-center space-y-10 md:space-y-0 md:justify-between'>
                     <div className='w-full flex  flex-row items-center  space-x-3  mx-auto '>
@@ -135,7 +119,6 @@ const WriteContent = () => {
             }
             {
                 result && <div className='px-2 my-6'>
-                    <p className='leading-5  my-2'>Note: <span className='underline'>Do not worry about formating it will be automatically formated when you paste it into your workspace</span></p>
                     <Result result={result} />
                 </div>
             }

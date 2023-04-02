@@ -13,6 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className={` bg-[#ffffff] shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
+
       <div className="max-w-7xl mx-auto">
         <div className="flex  items-center justify-between  ">
           <div className="z-[50] py-4 px-3 ">
