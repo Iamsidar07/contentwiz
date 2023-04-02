@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={` bg-[#ffffff] shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
+    <nav className={` bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 backdrop-blur-sm  shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
 
       <div className="max-w-7xl mx-auto">
         <div className="flex  items-center justify-between  ">
