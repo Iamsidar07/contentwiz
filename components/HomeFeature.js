@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 const HomeFeature = ({ title, desc, image, alt, changeSequence }) => {
 
     return (
-        <section className={`flex flex-col-reverse md:flex-row   justify-between  ${changeSequence && "md:flex-row-reverse"} bg-white`}>
+        <section className={`flex flex-col-reverse md:flex-row   justify-between bg-transparent  ${changeSequence && "md:flex-row-reverse bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"} bg-white`}>
             {
                 changeSequence ? <Fade bottom>
                     <div className='space-y-3 max-w-lg bg-white p-3 rounded-md shadow-sm sm:shadow-none flex flex-col justify-center '>
