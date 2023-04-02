@@ -16,11 +16,9 @@ export default async function (req, res) {
     }
 
 
-    let platform=req.body.platform;
-    let topic=req.body.topic;
-    let wordLimit=req.body.wordLimit;
-    
-    if (platform.trim().length === 0 || topic.trim().length === 0) {
+    let { topic,platform,wordLimit,tone }= req.body.post;
+    console.log(req.body)
+    if (platform==="" || topic==="" || wordLimit===""||tone==="") {
         res.status(400).json({
             error: {
                 message: "Missing platform or topic.",
@@ -33,7 +31,7 @@ export default async function (req, res) {
     try {
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: generatePrompt(platform,topic,wordLimit),
+            prompt: generatePrompt(platform,topic,wordLimit,tone),
             temperature: 0.8,
             max_tokens: 2000,
         });
@@ -55,9 +53,13 @@ export default async function (req, res) {
     }
 }
 
-function generatePrompt(platform,topic,wordLimit) {
+function generatePrompt(platform,topic,wordLimit,tone) {
     
-    return `Create content on the topic ${topic} to upload on the  ${platform} platform  under ${wordLimit} words. Please write this in a structured and polite way.`;
+    return `Hey ChatGPT, I want to creat an social media post. Here is the details:
+    topic of the post:${topic},
+    tone of the post:${tone},
+    creating post for the platform:${platform},
+    word limit:${wordLimit}`;
 }
 
 //topic->job description for SDE🙍🏿‍♂️ role
