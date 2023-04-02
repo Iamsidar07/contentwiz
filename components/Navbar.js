@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`bg-blue-800/45 backdrop-blur-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
+    <nav className={`bg-blue-800 bg-opacity-25 backdrop-blur-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
 
       <div className="max-w-7xl mx-auto">
         <div className="flex  items-center justify-between  ">
@@ -40,7 +40,7 @@ const Navbar = () => {
             {Links.map((link) => (
               <li
                 key={link.id}
-                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
+                className={` bg-opacity-25 group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
               >
                 <Link href={link.link}>
                   {link.name}
