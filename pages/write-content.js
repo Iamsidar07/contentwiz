@@ -67,7 +67,7 @@ const WriteContent = () => {
     }
 
     return (
-        <section className='max-w-7xl mx-auto sm:px-5 min-h-screen '>
+        <section className='max-w-7xl mx-auto px-2 sm:px-5 min-h-screen '>
            <h2 className='text-2xl mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-2xl mt-7">
 
