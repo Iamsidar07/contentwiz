@@ -67,11 +67,21 @@ const WriteContent = () => {
     }
 
     return (
+<<<<<<< HEAD
         <section className='max-w-7xl mx-auto sm:px-5 min-h-screen '>
            <h2 className='text-2xl mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-md mt-7">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-3 '>
+=======
+        <section className='flex flex-col items-center max-w-7xl mx-auto'>
+
+            <h1 className='text-center text-3xl font-bold md:text-7xl my-[15%] md:mt-10 md:mb-0 text-transparent bg-clip-text bg-gradient-to-br from-black to-blue-600'>&quot;Unleash your writing potential with  <span className="text-blue-600">Artificial Intelligence &quot;</span></h1>
+           
+            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5">
+
+                <div className='w-full flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-3 pt-10'>
+>>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
                     <div className='w-full'>
                         <p className='font-bold my-2 text-left'>Describe topic for the content</p>
                         <input
@@ -84,8 +94,12 @@ const WriteContent = () => {
                             className="text-base leading-6  bg-white px-4 py-6 md:flex-1 rounded-lg outline-none w-full"
                         />
                     </div>
+<<<<<<< HEAD
                     <Dropdown post={post} setPost={setPost}/>
                     <div>
+=======
+                    <div className="w-full">
+>>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
                         <p className='font-bold my-2 text-left'>Word limit:</p>
                         <input
                             type="number"
@@ -93,7 +107,11 @@ const WriteContent = () => {
                             onChange={(e) => setPost({ ...post, wordLimit: e.target.value })}
                             value={post.wordLimit}
                             placeholder="word limit"
+<<<<<<< HEAD
                             className="text-base leading-6  bg-white px-4 py-6  rounded-lg outline-none  "
+=======
+                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none w-full "
+>>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
                         />
                     </div>
                 </div>

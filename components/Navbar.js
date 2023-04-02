@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={` bg-[#ffffff] shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
+    <nav className={`bg-white sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
 
       <div className="max-w-7xl mx-auto">
         <div className="flex  items-center justify-between  ">
@@ -20,7 +20,7 @@ const Navbar = () => {
 
             <Link href={"/"} >
               <div className="flex items-center">
-                <GiCrownedSkull color="#100025" size={30}/>
+                <GiCrownedSkull color="black" size={30}/>
                 <span className="text-2xl md:text-3xl">contentWiz.org</span></div>
             </Link>
 
@@ -34,13 +34,13 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100  md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[90%] pt-8 md:pt-0 md:w-auto md:pl-0 p-2 text-center transition-all duration-250 ease-in ${open ? " top-12 bg-[#ffffff]   h-[95vh] " : "top-[-76vh] "
+            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100  md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[95%] pt-8 md:pt-0 md:w-auto md:pl-0 p-2 text-center transition-all duration-250 ease-in ${open ? " top-14 bg-white backdrop-sm h-[95vh] " : "top-[-76vh] "
               }`}
           >
             {Links.map((link) => (
               <li
                 key={link.id}
-                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
+                className={` bg-opacity-25 group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
               >
                 <Link href={link.link}>
                   {link.name}
