@@ -37,7 +37,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: large;
 }
 
 a {
@@ -49,7 +48,7 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Product Sans Regular';
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
