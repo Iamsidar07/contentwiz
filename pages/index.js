@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 export default function Home() {
   return (
     <div >
-      <main className="py-4 bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900">
+      <main className="py-4 ">
         <Fade bottom>
         <section className='flex flex-col  items-center justify-around max-w-7xl mx-auto leading-3  space-y-5 min-h-[calc(100vh-68px)]'>
           <div className='space-y-2'>
@@ -30,7 +30,7 @@ export default function Home() {
 
         <HomeFeature title={"Create content for LinkedIn"} image={"/content-moderation-min.gif"} alt="content for LinkedIn" desc={"Build your professional brand with our AI-powered content generator for LinkedIn. Create engaging posts that showcase your expertise and help you connect with your network."} />
 
-        <section className={`flex items-center justify-center py-4 md:px-[2%] h-48 bg-[#f6f5fa] bg-opacity-25 backdrop-blur-sm`}>
+        <section className={`flex items-center justify-center py-4 md:px-[2%] h-48 bg-[#f6f5fa]`}>
           <h2 className='text-5xl md:text-6xl font-bold text-center md:text-left'>Always <span className='text-blue-500'>free!</span> </h2>
         </section>
       </main>

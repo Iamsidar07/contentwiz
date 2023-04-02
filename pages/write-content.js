@@ -63,7 +63,7 @@ const WriteContent = () => {
     }
 
     return (
-        <section className='flex flex-col items-center  max-w-7xl mx-auto bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900'>
+        <section className='flex flex-col items-center max-w-7xl mx-auto'>
 
             <h1 className='text-center text-3xl font-bold md:text-7xl my-[15%] md:mt-10 md:mb-0 text-transparent bg-clip-text bg-gradient-to-br from-black to-blue-600'>&quot;Unleash your writing potential with  <span className="text-blue-600">Artificial Intelligence &quot;</span></h1>
            
