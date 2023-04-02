@@ -81,7 +81,7 @@ const WriteContent = () => {
                             className="text-base leading-6 text-gray-500 bg-white px-4 py-6 md:flex-1 rounded-lg outline-none w-full"
                         />
                     </div>
-                    <div>
+                    <div className="w-full">
                         <p className='font-bold my-2 text-left'>Word limit:</p>
                         <input
                             type="number"
@@ -89,7 +89,7 @@ const WriteContent = () => {
                             onChange={(e) => setWordLimit(e.target.value)}
                             value={wordLimit}
                             placeholder="word limit"
-                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none  "
+                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none w-full "
                         />
                     </div>
                 </div>
