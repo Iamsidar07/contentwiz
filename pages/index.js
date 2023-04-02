@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 export default function Home() {
   return (
     <div >
-      <main className=" py-4 ">
+      <main className="py-4 bg-gradient-to-tr from-blue-700 via-blue-800 to-gray-900">
         <Fade bottom>
         <section className='flex flex-col  items-center justify-around max-w-7xl mx-auto leading-3  space-y-5 min-h-[calc(100vh-68px)]'>
           <div className='space-y-2'>
