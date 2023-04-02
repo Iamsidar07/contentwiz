@@ -20,7 +20,7 @@ const Navbar = () => {
 
             <Link href={"/"} >
               <div className="flex items-center">
-                <GiCrownedSkull color="yellow" size={30}/>
+                <GiCrownedSkull color="black" size={30}/>
                 <span className="text-2xl md:text-3xl">contentWiz.org</span></div>
             </Link>
 
