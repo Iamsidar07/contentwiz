@@ -40,7 +40,7 @@ const Navbar = () => {
             {Links.map((link) => (
               <li
                 key={link.id}
-                className={` bg-opacity-25 group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
+                className={` bg-opacity-25 group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-2xl transition-all ease-in duration-100 cursor-pointer `}
               >
                 <Link href={link.link}>
                   {link.name}
@@ -49,7 +49,7 @@ const Navbar = () => {
             ))}
 
             <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-              <button className="px-12  rounded-full py-4   border-none shadow-lg  bg-[#100025] text-white md:hover:bg-[#100025d8]  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
+              <button className="px-12  rounded-2xl py-4   border-none shadow-lg  bg-[#100025] text-white md:hover:bg-[#100025d8]  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
                 follow</button>
             </Link>
           </ul>

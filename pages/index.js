@@ -17,7 +17,7 @@ export default function Home() {
           <div className=' text-center'>
             <div className='mb-5'>
               <Link href={"/write-content"}>
-                <p className='bg-[#100025] border-none rounded-lg text-center cursor-pointer px-12 text-white py-6'>start writing for free</p>
+                <p className='bg-[#100025] border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6'>start writing for free</p>
               </Link>
             </div>
             <small className='underline'>No sign in required</small>

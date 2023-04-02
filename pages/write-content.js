@@ -67,21 +67,11 @@ const WriteContent = () => {
     }
 
     return (
-<<<<<<< HEAD
         <section className='max-w-7xl mx-auto sm:px-5 min-h-screen '>
            <h2 className='text-2xl mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
-            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-md mt-7">
+            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-2xl mt-7">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-3 '>
-=======
-        <section className='flex flex-col items-center max-w-7xl mx-auto'>
-
-            <h1 className='text-center text-3xl font-bold md:text-7xl my-[15%] md:mt-10 md:mb-0 text-transparent bg-clip-text bg-gradient-to-br from-black to-blue-600'>&quot;Unleash your writing potential with  <span className="text-blue-600">Artificial Intelligence &quot;</span></h1>
-           
-            <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-7  p-2 md:p-5">
-
-                <div className='w-full flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-3 pt-10'>
->>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
                     <div className='w-full'>
                         <p className='font-bold my-2 text-left'>Describe topic for the content</p>
                         <input
@@ -91,15 +81,11 @@ const WriteContent = () => {
                             value={post.topic}
                             placeholder="write your topic."
                             required
-                            className="text-base leading-6  bg-white px-4 py-6 md:flex-1 rounded-lg outline-none w-full"
+                            className="text-base leading-6  bg-white px-4 py-6 md:flex-1 rounded-2xl outline-none w-full"
                         />
                     </div>
-<<<<<<< HEAD
                     <Dropdown post={post} setPost={setPost}/>
-                    <div>
-=======
-                    <div className="w-full">
->>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
+                    <div className='w-full'>
                         <p className='font-bold my-2 text-left'>Word limit:</p>
                         <input
                             type="number"
@@ -107,11 +93,7 @@ const WriteContent = () => {
                             onChange={(e) => setPost({ ...post, wordLimit: e.target.value })}
                             value={post.wordLimit}
                             placeholder="word limit"
-<<<<<<< HEAD
-                            className="text-base leading-6  bg-white px-4 py-6  rounded-lg outline-none  "
-=======
-                            className="text-base leading-6 text-gray-500 bg-white px-4 py-6  rounded-lg outline-none w-full "
->>>>>>> 032d86c363201c0cd515cf541fb8ad3022f711e9
+                            className="text-base leading-6 w-full bg-white px-4 py-6  rounded-2xl outline-none  "
                         />
                     </div>
                 </div>
@@ -120,7 +102,7 @@ const WriteContent = () => {
                         {
                             plateforms.map(({ name, image }, i) => {
 
-                                return <div onClick={() => setPost({...post,"plateform":name})} className={`p-3 bg-white rounded-3xl cursor-pointer group space-y-3 flex flex-col items-center justify-center h-32 ${post.plateform === name ? "w-36 h-36 shadow" : "w-32"}`} key={i}>
+                                return <div onClick={() => setPost({...post,"plateform":name})} className={`p-3 bg-white rounded-2xl cursor-pointer group space-y-3 flex flex-col items-center justify-center h-32 ${post.plateform === name ? "w-36 h-36 shadow" : "w-32"}`} key={i}>
                                     <Image src={image} alt={"Twitter"} width={90} height={90} className="group-hover:scale-110 transition-transform duration-200 ease-in" />
                                     <p>{
                                         post.plateform === name
@@ -133,7 +115,7 @@ const WriteContent = () => {
                             })
                         }
                     </div>
-                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className=' text bg-[#100025] border-none rounded-lg text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto ' />
+                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className=' text bg-[#100025] border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto ' />
                 </div>
             </form>
 
