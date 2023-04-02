@@ -7,12 +7,12 @@ const HomeFeature = ({ title, desc, image, alt, changeSequence }) => {
         <section className={`flex flex-col-reverse md:flex-row   justify-between  ${changeSequence && "md:flex-row-reverse"} bg-white`}>
             {
                 changeSequence ? <Fade bottom>
-                    <div className='space-y-3 max-w-lg bg-white p-3 rounded-md shadow-lg sm:shadow-none flex flex-col justify-center '>
+                    <div className='space-y-3 max-w-lg bg-white p-3 rounded-md shadow-sm sm:shadow-none flex flex-col justify-center '>
                         <h2 className='text-2xl md:text-3xl font-bold text-center md:text-left'>{title}</h2>
                         <p className='text-center md:text-left'>{desc}</p>
                     </div>
                 </Fade> : <Fade left>
-                        <div className='space-y-3 max-w-lg bg-white p-3 rounded-md shadow-lg sm:shadow-none flex flex-col justify-center'>
+                        <div className='space-y-3 max-w-lg bg-white p-3 rounded-md shadow-sm sm:shadow-none flex flex-col justify-center'>
                         <h2 className='text-2xl md:text-3xl font-bold text-center md:text-left'>{title}</h2>
                         <p className='text-center md:text-left'>{desc}</p>
                     </div>
