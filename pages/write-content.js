@@ -68,7 +68,7 @@ const WriteContent = () => {
 
     return (
         <section className='max-w-7xl mx-auto px-2 sm:px-5 min-h-screen '>
-           <h2 className='text-2xl mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
+           <h2 className='text-lg mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-2xl mt-7">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-3 '>
@@ -123,7 +123,7 @@ const WriteContent = () => {
                 loading && <Loading />
             }
             {
-                result && <div className='px-2 mt-12'>
+                result && <div className='mt-12'>
                     <Result result={result} />
                 </div>
             }

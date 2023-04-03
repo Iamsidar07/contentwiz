@@ -7,7 +7,7 @@ export default function Home() {
     <div >
       <main className="py-4 ">
         <Fade bottom>
-        <section className='flex flex-col  items-center justify-around max-w-7xl mx-auto leading-3  space-y-5 min-h-[calc(100vh-68px)]'>
+        <section className='flex px-2 flex-col  items-center justify-around max-w-7xl mx-auto leading-3  space-y-5 min-h-[calc(100vh-68px)]'>
           <div className='space-y-2'>
               <h1 className='text-center text-3xl font-bold md:text-7xl text-transparent bg-clip-text bg-gradient-to-br from-black to-blue-600'>Transforming the way you
     <span className="text-blue-600"> create content.</span></h1>
