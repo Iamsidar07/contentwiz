@@ -58,7 +58,7 @@ function generatePrompt(platform,topic,wordLimit,tone) {
     return `Hey ChatGPT, I want to creat an social media post. Here is the details:
     topic of the post:${topic},
     tone of the post:${tone},
-    creating post for the platform:${platform},
+    platform:${platform},
     word limit:${wordLimit}`;
 }
 

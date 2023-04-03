@@ -102,7 +102,7 @@ const WriteContent = () => {
                         {
                             plateforms.map(({ name, image }, i) => {
 
-                                return <div onClick={() => setPost({...post,"plateform":name})} className={`p-3 bg-white rounded-2xl cursor-pointer group space-y-3 flex flex-col items-center justify-center h-32 ${post.plateform === name ? "w-36 h-36 shadow" : "w-32"}`} key={i}>
+                                return <div onClick={() => setPost({...post,"plateform":name})} className={`p-4 bg-white rounded-2xl cursor-pointer group space-y-3 flex flex-col items-center justify-center h-32 ${post.plateform === name ? "w-36 h-36 shadow" : "w-32"}`} key={i}>
                                     <Image src={image} alt={"Twitter"} width={90} height={90} className="group-hover:scale-110 transition-transform duration-200 ease-in" />
                                     <p>{
                                         post.plateform === name
@@ -115,7 +115,7 @@ const WriteContent = () => {
                             })
                         }
                     </div>
-                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className=' text bg-[#100025] border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto ' />
+                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className={`text ${loading ? "bg-gray-500" :"bg-[#100025]"} border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto`}/>
                 </div>
             </form>
 
