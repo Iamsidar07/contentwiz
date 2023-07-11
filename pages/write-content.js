@@ -68,12 +68,12 @@ const WriteContent = () => {
 
     return (
         <section className='max-w-7xl mx-auto px-2 sm:px-5 min-h-screen '>
-           <h2 className='text-lg mt-5 text-left font-bold'>Create ✍️ post for social media</h2>
+           <h2 className='text-lg mt-5 text-left font-semibold'>Create ✍️ post for social media</h2>
             <form onSubmit={onSubmit} className="w-full text-center flex flex-col mx-auto space-y-10  rounded-2xl mt-7">
 
                 <div className='w-full flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-3 '>
                     <div className='w-full'>
-                        <p className='font-bold my-2 text-left'>Describe topic for the content</p>
+                        <p className='font-semibold my-2 text-left'>Describe topic for the content</p>
                         <input
                             type="text"
                             name='topic'
@@ -86,7 +86,7 @@ const WriteContent = () => {
                     </div>
                     <Dropdown post={post} setPost={setPost}/>
                     <div className='w-full'>
-                        <p className='font-bold my-2 text-left'>Word limit:</p>
+                        <p className='font-semibold my-2 text-left'>Word limit:</p>
                         <input
                             type="number"
                             name='wordLimit'
@@ -115,7 +115,7 @@ const WriteContent = () => {
                             })
                         }
                     </div>
-                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className={`text ${loading ? "bg-gray-500" :"bg-[#100025]"} border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6 font-bold  md:max-w-md md:ml-auto`}/>
+                    <input type="submit" value={`${loading ? "Creating Content..." : "Create Content"}`} className={`text ${loading ? "bg-gray-500" :"bg-[#100025]"} border-none rounded-2xl text-center cursor-pointer px-12 text-white py-6 font-semibold  md:max-w-md md:ml-auto`}/>
                 </div>
             </form>
 
